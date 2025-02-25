@@ -37,12 +37,11 @@ const PlaceOrder = () => {
 
       <div className="mt-8 min-w-80">
         <CartTotal/>
-      </div>
-      <div className="mt-12">
+
+        <div className="mt-12">
         <Title text1={'Payment'} text2={'Method'}/>
 
         {/* Payment method */}
-
         <div className="flex gap-3 flex-col lg:flex-row">
           <div onClick={() => setMethod('stripe')} className="flex items-center gap-3 border p-2 px-3 cursor-pointer">
             <p className={`min-w-3.5 h-3.5 border rounded-full ${method === 'stripe' ? 'bg-green-400' : ''}`}></p>
@@ -60,6 +59,8 @@ const PlaceOrder = () => {
         <div className="w-full text-end mt-8">
           <button onClick={() => navigate('/orders')} className='bg-black text-white px-16 py-3 text-sm rounded-2xl'>Place Order</button>
         </div>
+       
+      </div>
       </div>
     </div>
   )
