@@ -11,7 +11,3 @@ createRoot(document.getElementById('root')).render(
   </ShopContextProvider>
   </BrowserRouter>
 )
-
-
-// main.jsx:7 Uncaught ReferenceError: React is not defined
-//     at main.jsx:7:3

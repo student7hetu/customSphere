@@ -10,8 +10,8 @@ const About = () => {
       </div>
 
       <div className='my-10 flex flex-col md:flex-row gap-16'>
-        <img className='w-full md:max-w-[450px]' src={assets.about_img} />
-        <div className="flex flex-col justify-center gap-6 md:w-2/4 text-gray-600">
+        <img className='w-full md:max-w-[450px]' src={assets.about_us} />
+        <div className="flex flex-col justify-center gap-6 md:w-2/4 text-slate-600">
         <p>At CustomSphere, we’re all about bringing your creativity to life through custom-designed t-shirts. Whether you want to showcase your style, make a statement, or create something truly personal, we provide the perfect canvas for your imagination. Our mission is to offer high-quality, comfortable, and stylish apparel that reflects individuality and uniqueness.</p>
         <p>With a focus on premium materials, vibrant prints, and endless customization options, we ensure every piece is crafted to perfection. Whether you’re looking for trendy designs or a one-of-a-kind creation, we’re here to make your vision a reality. Join us in redefining fashion, one custom tee at a time!</p>
         </div>

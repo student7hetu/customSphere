@@ -7,8 +7,8 @@ const Footer = () => {
     <div>
       <div className="flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-40 text-sm">
         <div>
-          <img src={assets.logo} className="mb-5 w-33" />
-          <p className="w-full md:w-2/3 text-gray-600">
+          <img src={assets.LogoNew} className="mb-5 w-33" />
+          <p className="w-full md:w-2/3 text-slate-600">
             CustomSphere is your go-to destination for high-quality custom
             t-shirts and personalized apparel. We offer unique designs, premium
             fabric, and seamless customization options to help you express your
@@ -19,7 +19,7 @@ const Footer = () => {
         </div>
         <div>
           <p className="text-xl font-medium mb-5">Company</p>
-          <ul className="flex flex-col gap-1 text-gray-600">
+          <ul className="flex flex-col gap-1 text-slate-600">
             <li>
               <Link to="/">Home</Link>
             </li>
@@ -36,7 +36,7 @@ const Footer = () => {
         </div>
         <div>
           <p className="text-xl font-medium mb-5">Connect us</p>
-          <ul className="flex flex-col gap-1 text-gray-600">
+          <ul className="flex flex-col gap-1 text-slate-600">
             <li>+91 9099999999</li>
             <li>123@customsphere.com</li>
           </ul>
@@ -44,7 +44,7 @@ const Footer = () => {
       </div>
       <dir>
         <hr />
-        <p className="py-5 text-sm text-center">
+        <p className="py-5 text-sm text-gray-800 text-center">
           © 2024 CustomSphere. All rights reserved.
         </p>
       </dir>

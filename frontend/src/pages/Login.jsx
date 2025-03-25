@@ -54,7 +54,7 @@ const Login = () => {
     >
       <div className="inline-flex items-center gap-2 mb-2 mt-10">
         <p className="prate-regular text-3xl">{currentState}</p>
-        <hr className="border-none h-[1.5px] w-8 bg-gray-800" />
+        <hr className="border-none h-[1.5px] w-8 bg-gray-900" />
       </div>
       {currentState === "Login" ? (
         ""
@@ -64,7 +64,7 @@ const Login = () => {
           value={name}
           type="text"
           placeholder="Name"
-          className="w-full px-3 py-2 border border-gray-800"
+          className="w-full px-3 py-2 border border-gray-900"
         />
       )}
       <input
@@ -72,14 +72,14 @@ const Login = () => {
         value={email}
         type="email"
         placeholder="Email"
-        className="w-full px-3 py-2 border border-gray-800"
+        className="w-full px-3 py-2 border border-gray-900"
       />
       <input
         onChange={(e) => setPassword(e.target.value)}
         value={password}
         type="password"
         placeholder="Password"
-        className="w-full px-3 py-2 border border-gray-800"
+        className="w-full px-3 py-2 border border-gray-900"
       />
       <div className="w-full flex justify-between text-sm mt-[-8px]">
         <p className="cursor-pointer">Forgot password?</p>
@@ -99,7 +99,7 @@ const Login = () => {
           </p>
         )}
       </div>
-      <button className="bg-black rounded-2xl text-white font-light px-8 py-2 mt-4">
+      <button className="bg-gray-900 rounded-2xl text-neutral-200 font-light px-8 py-2 mt-4">
         {currentState === "Login" ? "Sign In" : "Sign Up"}
       </button>
     </form>

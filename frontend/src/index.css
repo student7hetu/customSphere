@@ -6,7 +6,7 @@ a.active hr{
 }
 
 *{
-    font-family: Outfit;
+    font-family: "Outfit"
 }
 
 .prata-regular {
@@ -21,8 +21,8 @@ a.active hr{
 
   @media (max-width:640px){
     a.active{
-        background-color: black;
-        color: white;
+        background-color: #1B263B;
+        color: #E0E1DD;
     }
   }
   
