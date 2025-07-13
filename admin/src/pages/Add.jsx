@@ -3,7 +3,7 @@ import {assets} from '../assets/assets'
 import axios from 'axios'
 import { backendUrl } from '../App'
 import { toast } from 'react-toastify'
-import { IoCloudUploadOutline } from "react-icons/io5";
+import { IoCloudUploadOutline } from "react-icons/io5"
 
 const Add = ({token}) => {
 
