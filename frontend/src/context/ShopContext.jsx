@@ -43,7 +43,6 @@ const ShopContextProvider = (props) => {
       try {
         await axios.post(backendUrl + '/api/cart/add', {itemId, size}, {headers:{token}})
       } catch (error) {
-        console.log(error)
         toast.error(error.message)
       }
     }
@@ -73,7 +72,6 @@ const updateQuantity = async(itemId, size, quantity) => {
     try {
       await axios.post(backendUrl + '/api/cart/update', {itemId, size, quantity}, {headers:{token}})
     } catch (error) {
-      console.log(error)
       toast.error(error.message)
     }
   }
