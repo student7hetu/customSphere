@@ -3,6 +3,7 @@ import {assets} from '../assets/assets'
 import axios from 'axios'
 import { backendUrl } from '../App'
 import { toast } from 'react-toastify'
+import { IoCloudUploadOutline } from "react-icons/io5";
 
 const Add = ({token}) => {
 
@@ -124,19 +125,19 @@ const Add = ({token}) => {
       <p className='mb-2'>Product Sizes</p>
       <div className='flex gap-3'>
       <div onClick={() => setSizes(prev => prev.includes("S") ? prev.filter(item => item !== "S") : [...prev, "S"])}>
-        <p className={`${sizes.includes("S") ? "bg-pink-100" : "bg-slate-200"} px-3 py-1 cursor-pointer`}>S</p>
+        <p className={`${sizes.includes("S") ? "bg-slate-400" : "bg-slate-200"} px-3 py-1 cursor-pointer`}>S</p>
       </div>
       <div onClick={() => setSizes(prev => prev.includes("M") ? prev.filter(item => item !== "M") : [...prev, "M"])}>
-        <p className={`${sizes.includes("M") ? "bg-pink-100" : "bg-slate-200"} px-3 py-1 cursor-pointer`}>M</p>
+        <p className={`${sizes.includes("M") ? "bg-slate-400" : "bg-slate-200"} px-3 py-1 cursor-pointer`}>M</p>
       </div>
       <div onClick={() => setSizes(prev => prev.includes("L") ? prev.filter(item => item !== "L") : [...prev, "L"])}>
-        <p className={`${sizes.includes("L") ? "bg-pink-100" : "bg-slate-200"} px-3 py-1 cursor-pointer`}>L</p>
+        <p className={`${sizes.includes("L") ? "bg-slate-400" : "bg-slate-200"} px-3 py-1 cursor-pointer`}>L</p>
       </div>
       <div onClick={() => setSizes(prev => prev.includes("XL") ? prev.filter(item => item !== "XL") : [...prev, "XL"])}>
-        <p className={`${sizes.includes("XL") ? "bg-pink-100" : "bg-slate-200"} px-3 py-1 cursor-pointer`}>XL</p>
+        <p className={`${sizes.includes("XL") ? "bg-slate-400" : "bg-slate-200"} px-3 py-1 cursor-pointer`}>XL</p>
       </div>
       <div onClick={() => setSizes(prev => prev.includes("XXL") ? prev.filter(item => item !== "XXL") : [...prev, "XXL"])}>
-        <p className={`${sizes.includes("XXL") ? "bg-pink-100" : "bg-slate-200"} px-3 py-1 cursor-pointer`}>XXL</p>
+        <p className={`${sizes.includes("XXL") ? "bg-slate-400" : "bg-slate-200"} px-3 py-1 cursor-pointer`}>XXL</p>
       </div>
     </div>
     </div>
@@ -146,7 +147,7 @@ const Add = ({token}) => {
       <label className='cursor-pointer' htmlFor="bestseller">Add to bestseller</label>
     </div>
 
-    <button type='submit' className='w-28 py-3 mt-4 bg-black text-white rounded-2xl'>ADD</button>
+    <button type='submit' className='w-28 py-3 mt-4 bg-gray-900 text-neutral-100 rounded-2xl'>ADD</button>
     
     </form>
   )

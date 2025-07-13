@@ -1,8 +1,17 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { backendUrl, currency } from '../App';
 import { toast } from 'react-toastify';
 import { assets } from '../assets/assets';
+=======
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
+import { backendUrl, currency } from '../App'
+import { toast } from 'react-toastify'
+import { assets } from '../assets/assets'
+import { FaBox } from "react-icons/fa6";
+>>>>>>> 59ed61c5a498e92afdd01ca574b7506ced132a8f
 
 const Orders = ({ token }) => {
   const [orders, setOrders] = useState([]);
@@ -52,6 +61,7 @@ const Orders = ({ token }) => {
     <div>
       <h3>Order Page</h3>
       <div>
+<<<<<<< HEAD
         {orders.map((order, index) => (
           <div
             className='grid grid-cols-1 sm:grid-cols[0.5fr_2fr_1fr] lg:grid-cols-[0.5fr_2fr_1fr_1fr_1fr] gap-3 items-start border-gray-200 p-5 md:p-8 my-3 md:my-4 text-xs sm:text-sm text-gray-700'
@@ -59,6 +69,12 @@ const Orders = ({ token }) => {
           >
             <img className='w-12' src={assets.parcel_icon} alt='' />
             <div>
+=======
+        {
+          orders.map((order, index) => (
+            <div className='grid grid-cols-1 sm:grid-cols[0.5fr_2fr_1fr] lg:grid-cols-[0.5fr_2fr_1fr_1fr_1fr] gap-3 items-start border-slate-200 p-5 md:p-8 my-3 md:my-4 text-xs sm:text-sm text-slate-700' key={index}>
+              <FaBox className='w-7 h-7' />
+>>>>>>> 59ed61c5a498e92afdd01ca574b7506ced132a8f
               <div>
                 {order.items.map((item, index) => {
                   if (index === order.items.length) {

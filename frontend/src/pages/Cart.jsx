@@ -3,6 +3,7 @@ import { ShopContext } from "../context/ShopContext";
 import Title from "../components/Title";
 import { assets } from "../assets/frontend_assets/assets";
 import CartTotal from "../components/CartTotal";
+import { MdDeleteOutline } from "react-icons/md";
 
 const Cart = () => {
   const { products, currency, cartItems, updateQuantity, navigate } =
@@ -42,7 +43,7 @@ const Cart = () => {
           return (
             <div
               key={index}
-              className="py-4 border-t border-b text-gray-700 grid grid-cols-[4fr_0.5fr_0.5fr] sm:grid-cols-[4fr_2fr_0.5fr] items-center gap-4"
+              className="py-4 border-t border-b text-slate-700 grid grid-cols-[4fr_0.5fr_0.5fr] sm:grid-cols-[4fr_2fr_0.5fr] items-center gap-4"
             >
               <div className="flex items-start gap-6">
                 <img
@@ -59,7 +60,7 @@ const Cart = () => {
                       {currency}
                       {productData.price}
                     </p>
-                    <p className="px-2 sm:px-3 sm:py-1 border bg-slate-50">
+                    <p className="px-2 sm:px-3 sm:py-1 border bg-neutral-200">
                       {item.size}
                     </p>
                   </div>
@@ -80,11 +81,11 @@ const Cart = () => {
                 min={1}
                 defaultValue={item.quantity}
               />
-              <img
+              <MdDeleteOutline
                 onClick={() => updateQuantity(item._id, item.size, 0)}
-                className="w-4 mr-4 sm:w-5 cursor-pointer"
-                src={assets.bin_icon}
-                alt=""
+                className="w-6 h-6 mr-4 sm:w-5 cursor-pointer"
+                // src={assets.bin_icon}
+                // alt=""
               />
             </div>
           );
@@ -96,7 +97,7 @@ const Cart = () => {
           <div className="w-full text-end">
             <button
               onClick={() => navigate("/place-order")}
-              className="bg-black text-white text-sm my-8 px-8 py-3 rounded-2xl"
+              className="bg-gray-900 text-neutral-200 text-sm my-8 px-8 py-3 rounded-2xl"
             >
               Checkout
             </button>

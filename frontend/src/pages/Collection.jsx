@@ -3,6 +3,7 @@ import { ShopContext } from "../context/ShopContext";
 import { assets } from "../assets/frontend_assets/assets";
 import Title from "../components/Title";
 import ProductItem from "../components/ProductItem";
+import { IoIosArrowForward } from "react-icons/io";
 
 const Collection = () => {
   const { products, search, showSearch } = useContext(ShopContext);
@@ -38,7 +39,7 @@ const Collection = () => {
     }
 
     if (subCategory.length > 0) {
-      productsCopy = productsCopy.filter((item) => subCategory.includes(item.subCategory)); // ✅ Fixed
+      productsCopy = productsCopy.filter((item) => subCategory.includes(item.subCategory)); 
     }
 
     setFilterProducts(productsCopy);
@@ -76,10 +77,10 @@ const Collection = () => {
           className="my-2 text-xl flex items-center cursor-pointer gap-2"
         >
           FILTERS
-          <img
+          <IoIosArrowForward
             className={`h-3 sm:hidden ${showFilter ? "rotate-90" : ""}`}
-            src={assets.dropdown_icon}
-            alt=""
+            // src={assets.dropdown_icon}
+            // alt=""
           />
         </p>
 
@@ -99,7 +100,7 @@ const Collection = () => {
         {/* Subcategory Filter */}
         <div className={`border border-gray-300 pl-5 py-3 my-5 ${showFilter ? "" : "hidden"} sm:block`}>
           <p className="mb-3 text-sm font-medium">TYPE</p>
-          <div className="flex flex-col gap-2 text-sm font-light text-gray-700">
+          <div className="flex flex-col gap-2 text-sm font-light text-slate-700">
             <p className="flex gap-2">
               <input type="checkbox" className="w-3" value="Tshirt" onChange={toggleSubCategory} /> Tshirt
             </p>
@@ -115,7 +116,7 @@ const Collection = () => {
         <div className="flex justify-between text-base sm:text-2xl mb-4">
           <Title text1="All" text2="Collections" />
           {/* Product Sort */}
-          <select className="border-2 border-gray-300 text-sm px-2" value={sortOption} onChange={handleSort}>
+          <select className="border-2 border-slate-300 text-sm px-2" value={sortOption} onChange={handleSort}>
             <option value="relavent">Sort by: Relevant</option>
             <option value="low-high">Sort by: Low to High</option>
             <option value="high-low">Sort by: High to Low</option>
@@ -131,11 +132,11 @@ const Collection = () => {
                 name={item.name}
                 id={item._id}
                 price={item.price}
-                image={item.image} // ✅ Fixed typo (was "iamge")
+                image={item.image} 
               />
             ))
           ) : (
-            <p className="text-center text-gray-500">No products found</p>
+            <p className="text-center text-slate-500">No products found</p>
           )}
         </div>
       </div>
